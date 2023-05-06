@@ -174,37 +174,60 @@ def main():
     
     #Initialize connection to database collection 'accounts'.
     collection = initialize_firestore()
-
-    #Display menu.
-    display_options()
     
     try:
-        #Prompt the user to choose an option from the menu.
-        choice = int(input('Enter your choice: '))
+        run = True
 
-        #Data validation for user input.
-        while (choice < 1 or choice > 3):
-            print("Invalid choice selected. Please try again.")
+        while (run):
+
+            #Display menu.
+            display_options()
+
+            #Prompt the user to choose an option from the menu.
             choice = int(input('Enter your choice: '))
+
+            #Data validation for user input.
+            while (choice < 1 or choice > 3):
+                print('Invalid choice selected. Please try again.')
+                choice = int(input('Enter your choice: '))
         
-        #User chooses to log into an account.
-        if (choice == 1):
-            os.system('cls')
-            log_in(collection)
+            #User chooses to log into an account.
+            if (choice == 1):
+                os.system('cls')
+                log_in(collection)
 
-        #User chooses to create an account.
-        elif (choice == 2):
-            create_account(collection)
+            #User chooses to create an account.
+            elif (choice == 2):
+                os.system('cls')
+                create_account(collection)
 
-        #User chooses to reset their password.
-        else:
-            reset_password(collection)
+            #User chooses to reset their password.
+            else:
+                os.system('cls')
+                reset_password(collection)
+        
+            #Ask the user if they would like to run the program again.
+            print('Would you like to do something else?')
+            print('1. Yes')
+            print('2. No')
+
+            run_again = int(input('Enter your choice: '))
+
+            while (run_again < 1 or run_again > 2):
+                print('Invalid choice, please try again.')
+                run_again = int(input('Enter your choice: '))
+
+            if (run_again == 1):
+                os.system('cls')
+                run = True
+            else:
+                run = False
     
     #User does not enter an integer.
     except ValueError:
-        print("Your choice must be an integer. Please restart.")
-
+        print('Your choice must be an integer. Please restart.')
     os.system('cls')
+    print('Goodbye!')
 
 main()
 
