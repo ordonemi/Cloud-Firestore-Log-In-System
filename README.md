@@ -3,7 +3,7 @@ This is a log in and authentication program that uses a Cloud Database to host t
 
 Databases are the cornerstone of many software applications, and while developing this project my main goal was to gain a better understanding of how to correctly implement the use of a cloud database within a program. As I move further in my career it is more than likely that I will find myself developing software that need one or more databases. Naturally, one project will not be sufficient to gain a proficient knowledge, but rather this was meant to begin to build the foundations for further research and projects regarding this topic.
 
-[Software Demo Video](https://youtu.be/e80wnHiVIMs)
+[Demonstration Video](https://youtu.be/e80wnHiVIMs)
 
 # Cloud Database
 
@@ -26,4 +26,4 @@ The database that was used for this program consists of an 'accounts' collection
 # Future Work
 - After user logs in, display their statistics* 
 - Determine what statistics to be saved
-- Create a collection for statistic in the same databse
+- Create a collection for statistics in the same databse
