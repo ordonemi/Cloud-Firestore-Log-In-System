@@ -12,12 +12,12 @@ Google Cloud Firestore
 The database that was used for this program consists of an 'accounts' collection. Within that collection, each document corresponds to an account that was created using the program. Each document's unique ID is the email that was used to create an account. Each document has fields for a 'username' and 'password'.
 
 # Development Environment
--Visual Studio Code
--Python 3.11.0
--Git/Github
--Google Cloud Firestore
--firebase_admin library
--markpass library 
+- Visual Studio Code
+- Python 3.11.0
+- Git/Github
+- Google Cloud Firestore
+- firebase_admin library
+- markpass library 
 
 # Useful Websites
 - [Google Firebase Documentation](https://firebase.google.com/docs/firestore)
